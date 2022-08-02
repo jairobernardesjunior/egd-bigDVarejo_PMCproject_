@@ -1,13 +1,13 @@
 ''' MontaUFparquet:
     recebe a tabela de percentual de crescimento de vendas de comércio por Unidade da Federação
-    e grava em arquivo parquet
+    e grava em arquivo json, txt e parquet
 '''
 
 import pandas as pd
 
 def Monta_UF_parquet(tabela, ano, mes, PathArquivoParquet):
-    qtd_linhas = tabela.nrows
-    linhaXLS= 6
+    qtd_linhas = 32 #tabela.shape[0] - 1
+    linhaXLS= 5
     i=0
     
     registro= []
@@ -50,7 +50,8 @@ def Monta_UF_parquet(tabela, ano, mes, PathArquivoParquet):
     m3anomes= []               
 
     while linhaXLS <= qtd_linhas:
-        valor= tabela.row(linhaXLS)[1].value
+        valor= tabela.iloc[linhaXLS, 1]
+
         if str(valor) == '-':
             valor = 0
 
@@ -60,41 +61,41 @@ def Monta_UF_parquet(tabela, ano, mes, PathArquivoParquet):
             break
 
         try:
-            testa= tabela.row(6)[7].value
+            testa= tabela.iloc[5, 7]
         except IndexError:
             break
 
         i= i+1
         registro.append(i)
-        descricao.append(tabela.row(linhaXLS)[0].value)
+        descricao.append(tabela.iloc[linhaXLS, 0])
 
-        m1anterior.append(str(tabela.row(linhaXLS)[1].value).replace('- ','0'))
-        m2anterior.append(str(tabela.row(linhaXLS)[2].value).replace('- ','0'))
-        m3anterior.append(str(tabela.row(linhaXLS)[3].value).replace('- ','0'))
-        m1anteriorD.append(str(tabela.row(5)[1].value) + ' - Mês anterior')
-        m2anteriorD.append(str(tabela.row(5)[2].value) + ' - Mês anterior')
-        m3anteriorD.append(str(tabela.row(5)[3].value) + ' - Mês anterior')
+        m1anterior.append(str(tabela.iloc[linhaXLS, 1]).replace('- ','0'))
+        m2anterior.append(str(tabela.iloc[linhaXLS, 2]).replace('- ','0'))
+        m3anterior.append(str(tabela.iloc[linhaXLS, 3]).replace('- ','0'))
+        m1anteriorD.append(str(tabela.iloc[4, 1]) + ' - Mês anterior')
+        m2anteriorD.append(str(tabela.iloc[4, 2]) + ' - Mês anterior')
+        m3anteriorD.append(str(tabela.iloc[4, 3]) + ' - Mês anterior')
 
-        m1mensal.append(str(tabela.row(linhaXLS)[4].value).replace('- ','0'))
-        m2mensal.append(str(tabela.row(linhaXLS)[5].value).replace('- ','0'))
-        m3mensal.append(str(tabela.row(linhaXLS)[6].value).replace('- ','0'))
-        m1mensalD.append(str(tabela.row(5)[4].value) + ' - Mensal')
-        m2mensalD.append(str(tabela.row(5)[5].value) + ' - Mensal')
-        m3mensalD.append(str(tabela.row(5)[6].value) + ' - Mensal')
+        m1mensal.append(str(tabela.iloc[linhaXLS, 4]).replace('- ','0'))
+        m2mensal.append(str(tabela.iloc[linhaXLS, 5]).replace('- ','0'))
+        m3mensal.append(str(tabela.iloc[linhaXLS, 6]).replace('- ','0'))
+        m1mensalD.append(str(tabela.iloc[4, 4]) + ' - Mensal')
+        m2mensalD.append(str(tabela.iloc[4, 5]) + ' - Mensal')
+        m3mensalD.append(str(tabela.iloc[4, 6]) + ' - Mensal')
 
-        m1acumulado.append(str(tabela.row(linhaXLS)[7].value).replace('- ','0'))
-        m2acumulado.append(str(tabela.row(linhaXLS)[8].value).replace('- ','0'))
-        m3acumulado.append(str(tabela.row(linhaXLS)[9].value).replace('- ','0'))
-        m1acumuladoD.append(str(tabela.row(5)[7].value) + ' - Acumulado no ano')
-        m2acumuladoD.append(str(tabela.row(5)[8].value) + ' - Acumulado no ano')
-        m3acumuladoD.append(str(tabela.row(5)[9].value) + ' - Acumulado no ano')
+        m1acumulado.append(str(tabela.iloc[linhaXLS, 7]).replace('- ','0'))
+        m2acumulado.append(str(tabela.iloc[linhaXLS, 8]).replace('- ','0'))
+        m3acumulado.append(str(tabela.iloc[linhaXLS, 9]).replace('- ','0'))
+        m1acumuladoD.append(str(tabela.iloc[4, 7]) + ' - Acumulado no ano')
+        m2acumuladoD.append(str(tabela.iloc[4, 8]) + ' - Acumulado no ano')
+        m3acumuladoD.append(str(tabela.iloc[4, 9]) + ' - Acumulado no ano')
 
-        m1u12m.append(str(tabela.row(linhaXLS)[10].value).replace('- ','0'))
-        m2u12m.append(str(tabela.row(linhaXLS)[11].value).replace('- ','0'))
-        m3u12m.append(str(tabela.row(linhaXLS)[12].value).replace('- ','0'))
-        m1u12mD.append(str(tabela.row(5)[10].value) + ' - Últimos 12 meses')
-        m2u12mD.append(str(tabela.row(5)[11].value) + ' - Últimos 12 meses')
-        m3u12mD.append(str(tabela.row(5)[12].value) + ' - Últimos 12 meses')
+        m1u12m.append(str(tabela.iloc[linhaXLS, 10]).replace('- ','0'))
+        m2u12m.append(str(tabela.iloc[linhaXLS, 11]).replace('- ','0'))
+        m3u12m.append(str(tabela.iloc[linhaXLS, 12]).replace('- ','0'))
+        m1u12mD.append(str(tabela.iloc[4, 10]) + ' - Últimos 12 meses')
+        m2u12mD.append(str(tabela.iloc[4, 11]) + ' - Últimos 12 meses')
+        m3u12mD.append(str(tabela.iloc[4, 12]) + ' - Últimos 12 meses')
 
         mes_2= int(mes) -2
         mes_1= int(mes) -1
