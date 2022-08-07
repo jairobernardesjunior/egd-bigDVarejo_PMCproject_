@@ -5,9 +5,9 @@
     https://ftp.ibge.gov.br/Comercio_e_Servicos/Pesquisa_Mensal_de_Comercio/Tabelas
 '''
 
-import os
 #import urllib3.request
 #import urllib.request
+import os
 import requests
 import datetime
 import eventlet

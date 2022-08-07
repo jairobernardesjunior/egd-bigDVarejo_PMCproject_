@@ -24,8 +24,8 @@ import datetime
 import pandas as pd
 
 #import uploadS3 as upds3
-import montaCatComercioParquet as catp
-import montaUFparquet as ufp
+import montaCatComercioJson as catp
+import montaUFjson as ufp
 
 # ******************** INÍCIO
 
@@ -43,14 +43,14 @@ if os.path.exists('ultimoProcessado/ultimoProcessado.txt') == False:
     arquivo.write("vazio")
     arquivo.close
 
-# lê o arquivo ultimoProcessado.txt para pegar o último arquivo .csv transformado em parquet
+# lê o arquivo ultimoProcessado.txt para pegar o último arquivo .csv transformado em Json
 linha='vazio'
 arquivo = open('ultimoProcessado/ultimoProcessado.txt','r')
 for linha in arquivo:
     linha = linha.rstrip()
 arquivo.close()
 
-# verifica se o arquivo ultimoProcessado.txt tem a informação do último arquivo.csv transformado em parquet
+# verifica se o arquivo ultimoProcessado.txt tem a informação do último arquivo.csv transformado em Json
 if linha == 'vazio':
     url = 'pmc_201800_00.csv'   
 else:
@@ -93,16 +93,16 @@ while int(ano) <= int(anocorrente):
                 #exit()
 
                 if (tabela.iloc[5, 0] == 'Brasil ') or (tabela.iloc[5, 0] == 'Brasil'):
-                    PathArquivoParquet= ('arquivosPMCprocessed/PercUF_' + 
+                    PathArquivoJson= ('arquivosPMCprocessed/PercUF_' + 
                                         nomeArq.format(anomes, seq)[:13])
-                    retorno= ufp.Monta_UF_parquet(tabela, ano, mes, PathArquivoParquet)
+                    retorno= ufp.Monta_UF_Json(tabela, ano, mes, PathArquivoJson)
                 else:
-                    PathArquivoParquet= ('arquivosPMCprocessed/PercCAT_COMERCIO_' + 
+                    PathArquivoJson= ('arquivosPMCprocessed/PercCAT_COMERCIO_' + 
                                         nomeArq.format(anomes, seq)[:13])                    
-                    retorno= catp.Monta_CatComercio_parquet(tabela, ano, mes, PathArquivoParquet)
+                    retorno= catp.Monta_CatComercio_Json(tabela, ano, mes, PathArquivoJson)
 
                 if retorno == True:
-                    #upds3.upload_fileS3(PathArquivoParquet, 'arquivosPMCstagedS3', 'aws_access_key', 'aws_secret_key')
+                    #upds3.upload_fileS3(PathArquivoJson, 'arquivosPMCstagedS3', 'aws_access_key', 'aws_secret_key')
                     ultimoArquivoProcessado = nomeArq.format(anomes, seq)
 
                 #print(nomeArq.format(anomes, seq))

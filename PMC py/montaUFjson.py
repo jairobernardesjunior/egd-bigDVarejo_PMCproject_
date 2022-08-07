@@ -1,11 +1,11 @@
-''' MontaUFparquet:
+''' MontaUFJson:
     recebe a tabela de percentual de crescimento de vendas de comércio por Unidade da Federação
     e grava em arquivo json, txt e parquet
 '''
 
 import pandas as pd
 
-def Monta_UF_parquet(tabela, ano, mes, PathArquivoParquet):
+def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
     qtd_linhas = 32 #tabela.shape[0] - 1
     linhaXLS= 5
     i=0
@@ -145,9 +145,9 @@ def Monta_UF_parquet(tabela, ano, mes, PathArquivoParquet):
                 "m3anomes":m3anomes,
                 })
 
-        df.to_parquet(PathArquivoParquet + '.pq')
-        df.to_string(PathArquivoParquet + '.txt')
-        df.to_json(PathArquivoParquet + '.json')
+        df.to_parquet(PathArquivoJson + '.pq')
+        df.to_string(PathArquivoJson + '.txt')
+        df.to_json(PathArquivoJson + '.json')
         return True 
     else:
         return False

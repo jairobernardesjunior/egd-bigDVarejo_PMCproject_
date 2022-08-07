@@ -1917,8 +1917,8 @@
     },
     {
       "type": "text",
-      "version": 1413,
-      "versionNonce": 1731372882,
+      "version": 1422,
+      "versionNonce": 1418627792,
       "isDeleted": false,
       "id": "5ImLG5kVuVfsK3AcRMOIX",
       "fillStyle": "hachure",
@@ -1927,11 +1927,11 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -133.54172023558777,
+      "x": -147.54172023558777,
       "y": -226.07220295954062,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 194,
+      "width": 208,
       "height": 117,
       "seed": 1157133572,
       "groupIds": [],
@@ -1942,17 +1942,17 @@
           "type": "arrow"
         }
       ],
-      "updated": 1657192722591,
+      "updated": 1659622741128,
       "link": null,
       "locked": false,
       "fontSize": 10.577239616784142,
       "fontFamily": 1,
-      "text": "Transforma os arquivos .xls\nbaixados do site do IBGE,\nsepara as informações de UF\ndas informações de categoria\ncomercial e grava em arquivos\njson em 2 tipos de tabelas\numa de UF e outra de categoria\ncomercial. Faz o load do json\npara o bucket arquivosPMCstagedS3",
+      "text": "Transforma os arquivos .xls\nbaixados do site do IBGE,\nsepara as informações de UF\ndas informações de categoria\ncomercial e grava em arquivos\njson em 2 tipos de tabelas\numa de UF e outra de categoria\ncomercial. Faz o load do json\npara o bucket arquivosPMCprocessedS3",
       "baseline": 113,
       "textAlign": "right",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Transforma os arquivos .xls\nbaixados do site do IBGE,\nsepara as informações de UF\ndas informações de categoria\ncomercial e grava em arquivos\njson em 2 tipos de tabelas\numa de UF e outra de categoria\ncomercial. Faz o load do json\npara o bucket arquivosPMCstagedS3"
+      "originalText": "Transforma os arquivos .xls\nbaixados do site do IBGE,\nsepara as informações de UF\ndas informações de categoria\ncomercial e grava em arquivos\njson em 2 tipos de tabelas\numa de UF e outra de categoria\ncomercial. Faz o load do json\npara o bucket arquivosPMCprocessedS3"
     },
     {
       "type": "text",
@@ -2024,8 +2024,8 @@
     },
     {
       "type": "text",
-      "version": 1761,
-      "versionNonce": 883467534,
+      "version": 1774,
+      "versionNonce": 2005054512,
       "isDeleted": false,
       "id": "GZ9sVucYxWGNDPmBLcqut",
       "fillStyle": "hachure",
@@ -2044,17 +2044,17 @@
       "groupIds": [],
       "strokeSharpness": "sharp",
       "boundElements": [],
-      "updated": 1657192722591,
+      "updated": 1659622703629,
       "link": null,
       "locked": false,
       "fontSize": 11.78252765791902,
       "fontFamily": 1,
-      "text": "arquivosPMCstagedS3 - json\narmazena os arquivos json\nresultante da separação dos %\nde crescimento de vendas por UF\ne de categoria de comércio, para\nguardar os dados originais.",
+      "text": "arquivosPMCprocessedS3 - json\narmazena os arquivos json\nresultante da separação dos %\nde crescimento de vendas por UF\ne de categoria de comércio, para\nguardar os dados originais.",
       "baseline": 80,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "arquivosPMCstagedS3 - json\narmazena os arquivos json\nresultante da separação dos %\nde crescimento de vendas por UF\ne de categoria de comércio, para\nguardar os dados originais."
+      "originalText": "arquivosPMCprocessedS3 - json\narmazena os arquivos json\nresultante da separação dos %\nde crescimento de vendas por UF\ne de categoria de comércio, para\nguardar os dados originais."
     },
     {
       "type": "text",
