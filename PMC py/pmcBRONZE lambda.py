@@ -17,8 +17,8 @@ import boto3
 def UploadCSVfile_arquivosPMCrawS3(NomeBucketS3, nomeArquivo, pathArquivo):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='AKIATG2MKBIBCUNRCCOX',
-        aws_secret_access_key='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',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
 
@@ -27,8 +27,8 @@ def UploadCSVfile_arquivosPMCrawS3(NomeBucketS3, nomeArquivo, pathArquivo):
 def LeUltimoBaixado_arquivosPMCrawS3(NomeBucketS3, arquivoUltimoBaixado, patharquivoUltimoBaixado):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='AKIATG2MKBIBCUNRCCOX',
-        aws_secret_access_key='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',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
     
@@ -37,8 +37,8 @@ def LeUltimoBaixado_arquivosPMCrawS3(NomeBucketS3, arquivoUltimoBaixado, patharq
 def ApagaUltimoArquivoBaixado_arquivosPMCrawS3(NomeBucketS3, pathArquivo):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='AKIATG2MKBIBCUNRCCOX',
-        aws_secret_access_key='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',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
 

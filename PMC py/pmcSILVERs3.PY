@@ -335,8 +335,8 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
 def UploadJSONfile_arquivosPMCprocessedS3(NomeBucketS3, nomeArquivo, pathArquivo):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='AKIATG2MKBIBDHVES36X',
-        aws_secret_access_key='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',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
 
@@ -345,8 +345,8 @@ def UploadJSONfile_arquivosPMCprocessedS3(NomeBucketS3, nomeArquivo, pathArquivo
 def Le_arquivosBucketS3(NomeBucketS3, arquivoUltimoProcessado, patharquivoUltimoProcessado):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='AKIATG2MKBIBDHVES36X',
-        aws_secret_access_key='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',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
 
