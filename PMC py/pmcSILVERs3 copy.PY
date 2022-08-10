@@ -490,4 +490,12 @@ def lambda_handler(event, context):
         
     if len(ultimoArquivoProcessado) > 0: # grava a posição do último arquivo pmc.csv Processado
         SalvaUltimaURL(patharquivoUltimoProcessado, ultimoArquivoProcessado)
-        UploadJSONfile_arquivosPMCprocessedS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado)    
+        UploadJSONfile_arquivosPMCprocessedS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado) 
+
+NomeBucketS3processed = 'arquivos-pmc-processeds3'
+NomeBucketS3raw = 'arquivos-pmc-raws3'
+arquivoUltimoProcessado = 'ultimoProcessado.txt'
+patharquivoUltimoProcessado = 'arquivosPMCprocessed/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
+tmpAux = 'arquivosPMCprocessed/' #arquivosPMCprocessed/' '/tmp/'
+tmpAuxRaw = 'arquivosPMCraw/' #arquivosPMCraw/' '/tmp/'
+lambda_handler(1, 1)    
