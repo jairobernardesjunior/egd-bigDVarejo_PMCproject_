@@ -9,8 +9,8 @@ import boto3
 def LeUltimoBaixado_arquivosPMCrawS3(NomeBucketS3, arquivoUltimoBaixado, patharquivoUltimoBaixado):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='AKIATG2MKBIBCUNRCCOX',
-        aws_secret_access_key='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',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
     
