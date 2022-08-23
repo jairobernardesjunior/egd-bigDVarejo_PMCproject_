@@ -4,8 +4,8 @@ import botocore
 def Le_arquivosBucketS3(NomeBucketS3, arquivoUltimoProcessado, patharquivoUltimoProcessado):
     client = boto3.client(
         service_name='s3',
-        aws_access_key_id='xxxxxxxxxxx',
-        aws_secret_access_key='xxxxxxxxxxxxxxxxxx',
+        aws_access_key_id='xxxxxxxxxxxxxxxxxxxxxx',
+        aws_secret_access_key='xxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region_name='eu-west-1' # voce pode usar qualquer regiao
         )    
 

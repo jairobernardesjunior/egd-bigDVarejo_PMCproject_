@@ -25,12 +25,13 @@
 
 import os
 import datetime
-from numpy import meshgrid
 
 import pandas as pd
 
-import fc_pmcSILVER_Monta_CatComercio_Json as MCatC
-import fc_pmcSILVER_Monta_UF_Json as MUF
+#import fc_pmcSILVER_Monta_CatComercio_Json as MCatC
+#import fc_pmcSILVER_Monta_UF_Json as MUF
+import fc_montaCatComercioJson2 as MCatC
+import fc_montaUFjson2 as MUF
 
 import fc_UploadFile_arquivosPMCprocessedS3 as uplf
 import fc_Le_arquivosBucketS3 as leS3
@@ -41,6 +42,7 @@ def lambda_handler(event, context):
 
     # Baixa arquivo ultimoProcessado.txt do Buckets3
     NomeBucketS3processed = 'arquivos-pmc-processeds3'
+    NomeBucketS3processedUF = 'arquivos-pmc-processeds3-uf'
     NomeBucketS3raw = 'arquivos-pmc-raws3'
     arquivoUltimoProcessado = 'ultimoProcessado.txt'
     patharquivoUltimoProcessado = 'arquivosPMCprocessed/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
@@ -101,9 +103,9 @@ def lambda_handler(event, context):
 
         while int(mes) <= 1: #12:
 
-            print('mes ' + str(meshgrid))
+            print('mes ' + str(mes))
 
-            while int(seq) <= 3: #13:
+            while int(seq) <= 13: #13:
 
                 print('seq ' + str(seq))
 
@@ -122,17 +124,25 @@ def lambda_handler(event, context):
                         PathArquivoJson= ('arquivosPMCprocessed/PercUF_' + 
                                             nomeArq.format(anomes, seq)[:13])
                         retorno= MUF.Monta_UF_Json(tabela, ano, mes, PathArquivoJson)
+
+                        if retorno == True:
+                            uplf.UploadFile_arquivosPMCprocessedS3(
+                                            NomeBucketS3processedUF, 
+                                            nomeArquivoJson + '.csv', 
+                                            PathArquivoJson + '.csv')
+                            ultimoArquivoProcessado = nomeArq.format(anomes, seq)                        
                     else:
                         nomeArquivoJson= 'PercCAT_COMERCIO_' + nomeArqJson.format(anomes, seq)[:13]
                         PathArquivoJson= ('arquivosPMCprocessed/PercCAT_COMERCIO_' + 
                                             nomeArq.format(anomes, seq)[:13])                    
                         retorno= MCatC.Monta_CatComercio_Json(tabela, ano, mes, PathArquivoJson)
 
-                    if retorno == True:
-                        uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3processed, 
-                                        nomeArquivoJson + '.json', 
-                                        PathArquivoJson + '.json')
-                        ultimoArquivoProcessado = nomeArq.format(anomes, seq)
+                        if retorno == True:
+                            uplf.UploadFile_arquivosPMCprocessedS3(
+                                            NomeBucketS3processed, 
+                                            nomeArquivoJson + '.csv', 
+                                            PathArquivoJson + '.csv')
+                            ultimoArquivoProcessado = nomeArq.format(anomes, seq)
          
                 seq = int(seq) + 1
                 seq = '%02d' % seq
@@ -151,6 +161,7 @@ def lambda_handler(event, context):
         uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado) 
 
 NomeBucketS3processed = 'arquivos-pmc-processeds3'
+NomeBucketS3processedUF = 'arquivos-pmc-processeds3-uf'
 NomeBucketS3raw = 'arquivos-pmc-raws3'
 arquivoUltimoProcessado = 'ultimoProcessado.txt'
 patharquivoUltimoProcessado = 'arquivosPMCprocessed/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'

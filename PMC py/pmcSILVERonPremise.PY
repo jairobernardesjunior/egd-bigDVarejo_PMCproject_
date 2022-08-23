@@ -24,8 +24,8 @@ import datetime
 import pandas as pd
 
 #import uploadS3 as upds3
-import montaCatComercioJson as catp
-import montaUFjson as ufp
+import fc_montaCatComercioJson as catp
+import fc_montaUFjson as ufp
 
 # ******************** INÍCIO
 

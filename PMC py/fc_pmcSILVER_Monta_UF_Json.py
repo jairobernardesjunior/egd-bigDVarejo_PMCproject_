@@ -148,6 +148,7 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
         df.to_parquet(PathArquivoJson + '.pq')
         df.to_string(PathArquivoJson + '.txt')
         df.to_json(PathArquivoJson + '.json')
+        df.to_csv(PathArquivoJson + '.csv')
         return True 
     else:
         return False

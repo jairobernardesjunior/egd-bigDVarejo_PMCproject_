@@ -12,6 +12,7 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
     
     registro= []
     descricao= []
+    anomes= []
 
     m1anterior= []
     m2anterior= []
@@ -68,6 +69,7 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
         i= i+1
         registro.append(i)
         descricao.append(tabela.iloc[linhaXLS, 0])
+        anomes.append(str(ano) + str(mes))
 
         m1anterior.append(str(tabela.iloc[linhaXLS, 1]).replace('- ','0'))
         m2anterior.append(str(tabela.iloc[linhaXLS, 2]).replace('- ','0'))
@@ -96,13 +98,26 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
         m1u12mD.append(str(tabela.iloc[4, 10]) + ' - Últimos 12 meses')
         m2u12mD.append(str(tabela.iloc[4, 11]) + ' - Últimos 12 meses')
         m3u12mD.append(str(tabela.iloc[4, 12]) + ' - Últimos 12 meses')
-
+        
         mes_2= int(mes) -2
         mes_1= int(mes) -1
+        anoAuxM2= ano
+        anoAuxM1= ano
+
+        if int(mes_1)==0:
+            mes_1=12
+            mes_2=11
+            anoAuxM1=int(anoAuxM1)-1
+            anoAuxM2=int(anoAuxM2)-1
+        else:
+            if int(mes_2)==0:
+                mes_2=12
+                anoAuxM2=int(anoAuxM2)-1
+
         mes_2 = '%02d' % mes_2
         mes_1 = '%02d' % mes_1
-        m1anomes.append(str(ano) + str(mes_2))
-        m2anomes.append(str(ano) + str(mes_1))
+        m1anomes.append(str(anoAuxM2) + str(mes_2))
+        m2anomes.append(str(anoAuxM1) + str(mes_1))
         m3anomes.append(str(ano) + str(mes))          
 
         linhaXLS=linhaXLS+1
@@ -111,6 +126,7 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
         df=pd.DataFrame({
                 "registro":registro,
                 "UF":descricao,
+                "ano_mes":anomes,
 
                 "m1anterior":m1anterior,
                 "m2anterior":m2anterior,
@@ -148,6 +164,7 @@ def Monta_UF_Json(tabela, ano, mes, PathArquivoJson):
         df.to_parquet(PathArquivoJson + '.pq')
         df.to_string(PathArquivoJson + '.txt')
         df.to_json(PathArquivoJson + '.json')
+        df.to_csv(PathArquivoJson + '.csv')
         return True 
     else:
         return False

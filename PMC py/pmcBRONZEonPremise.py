@@ -12,7 +12,7 @@ import requests
 import datetime
 import eventlet
 import pandas as pd
-import uploadS3 as upds3
+#import fc_UploadFile_arquivosPMCprocessedS3 as upds3
 
 def ConvertArquivoParaCSV(url):
     arquivoxls = pd.read_excel('arquivosPMCraw/' + url[85:103])
