@@ -41,21 +41,21 @@ def lambda_handler(event, context):
     # ******************** INÍCIO
 
     # Baixa arquivo ultimoProcessado.txt do Buckets3
-    NomeBucketS3processed = 'arquivos-pmc-processeds3'
+    NomeBucketS3processedCatCom = 'arquivos-pmc-processeds3-catcom'
     NomeBucketS3processedUF = 'arquivos-pmc-processeds3-uf'
     NomeBucketS3raw = 'arquivos-pmc-raws3'
     arquivoUltimoProcessado = 'ultimoProcessado.txt'
-    patharquivoUltimoProcessado = 'arquivosPMCprocessed/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
+    patharquivoUltimoProcessado = 'arquivosPMCraw/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
     tmpAux = 'arquivosPMCprocessed/' #arquivosPMCprocessed/' '/tmp/'
     tmpAuxRaw = 'arquivosPMCraw/' #arquivosPMCraw/' '/tmp/'
     #patharquivoUltimoProcessado = '/tmp/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
     #tmpAux = '/tmp/' #arquivosPMCprocessed/' '/tmp/'   
  
-    retornoLe = leS3.Le_arquivosBucketS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado)
+    retornoLe = leS3.Le_arquivosBucketS3(NomeBucketS3raw, arquivoUltimoProcessado, patharquivoUltimoProcessado)
 
     if retornoLe == False:
         print('arquivo não encontrado: ' + arquivoUltimoProcessado + 
-              ' no bucket ' + NomeBucketS3processed)
+              ' no bucket ' + NomeBucketS3raw)
         exit()
 
     # verifica se o arquivo ultimoProcessado.txt existe e, se não, cria o mesmo
@@ -128,8 +128,8 @@ def lambda_handler(event, context):
                         if retorno == True:
                             uplf.UploadFile_arquivosPMCprocessedS3(
                                             NomeBucketS3processedUF, 
-                                            nomeArquivoJson + '.csv', 
-                                            PathArquivoJson + '.csv')
+                                            nomeArquivoJson + '.pq', 
+                                            PathArquivoJson + '.pq')
                             ultimoArquivoProcessado = nomeArq.format(anomes, seq)                        
                     else:
                         nomeArquivoJson= 'PercCAT_COMERCIO_' + nomeArqJson.format(anomes, seq)[:13]
@@ -139,9 +139,9 @@ def lambda_handler(event, context):
 
                         if retorno == True:
                             uplf.UploadFile_arquivosPMCprocessedS3(
-                                            NomeBucketS3processed, 
-                                            nomeArquivoJson + '.csv', 
-                                            PathArquivoJson + '.csv')
+                                            NomeBucketS3processedCatCom, 
+                                            nomeArquivoJson + '.pq', 
+                                            PathArquivoJson + '.pq')
                             ultimoArquivoProcessado = nomeArq.format(anomes, seq)
          
                 seq = int(seq) + 1
@@ -158,13 +158,14 @@ def lambda_handler(event, context):
         
     if len(ultimoArquivoProcessado) > 0: # grava a posição do último arquivo pmc.csv Processado
         sURL.SalvaUltimaURL(patharquivoUltimoProcessado, ultimoArquivoProcessado)
-        uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado) 
+        uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3raw, arquivoUltimoProcessado, patharquivoUltimoProcessado) 
 
-NomeBucketS3processed = 'arquivos-pmc-processeds3'
+NomeBucketS3processedCatCom = 'arquivos-pmc-processeds3-catcom'
 NomeBucketS3processedUF = 'arquivos-pmc-processeds3-uf'
 NomeBucketS3raw = 'arquivos-pmc-raws3'
 arquivoUltimoProcessado = 'ultimoProcessado.txt'
-patharquivoUltimoProcessado = 'arquivosPMCprocessed/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
+patharquivoUltimoProcessado = 'arquivosPMCraw/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
 tmpAux = 'arquivosPMCprocessed/' #arquivosPMCprocessed/' '/tmp/'
 tmpAuxRaw = 'arquivosPMCraw/' #arquivosPMCraw/' '/tmp/'
+  
 lambda_handler(1, 1)    
