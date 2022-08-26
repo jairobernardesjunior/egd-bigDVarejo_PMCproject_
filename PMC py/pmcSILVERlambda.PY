@@ -25,12 +25,13 @@
 
 import os
 import datetime
-from numpy import meshgrid
 
 import pandas as pd
 
-import fc_pmcSILVER_Monta_CatComercio_Json as MCatC
-import fc_pmcSILVER_Monta_UF_Json as MUF
+#import fc_pmcSILVER_Monta_CatComercio_Json as MCatC
+#import fc_pmcSILVER_Monta_UF_Json as MUF
+import fc_montaCatComercioJson2 as MCatC
+import fc_montaUFjson2 as MUF
 
 import fc_UploadFile_arquivosPMCprocessedS3 as uplf
 import fc_Le_arquivosBucketS3 as leS3
@@ -40,20 +41,21 @@ def lambda_handler(event, context):
     # ******************** INÍCIO
 
     # Baixa arquivo ultimoProcessado.txt do Buckets3
-    NomeBucketS3processed = 'arquivos-pmc-processeds3'
+    NomeBucketS3processedCatCom = 'arquivos-pmc-processeds3-catcom'
+    NomeBucketS3processedUF = 'arquivos-pmc-processeds3-uf'
     NomeBucketS3raw = 'arquivos-pmc-raws3'
     arquivoUltimoProcessado = 'ultimoProcessado.txt'
-    patharquivoUltimoProcessado = 'arquivosPMCprocessed/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
+    patharquivoUltimoProcessado = 'arquivosPMCraw/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
     tmpAux = 'arquivosPMCprocessed/' #arquivosPMCprocessed/' '/tmp/'
     tmpAuxRaw = 'arquivosPMCraw/' #arquivosPMCraw/' '/tmp/'
-    patharquivoUltimoProcessado = '/tmp/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
-    tmpAux = '/tmp/' #arquivosPMCprocessed/' '/tmp/'   
+    #patharquivoUltimoProcessado = '/tmp/ultimoProcessado.txt' #'arquivosPMCprocessed/ultimoProcessado.txt' '/tmp/ultimoProcessado.txt'
+    #tmpAux = '/tmp/' #arquivosPMCprocessed/' '/tmp/'   
  
-    retornoLe = leS3.Le_arquivosBucketS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado)
+    retornoLe = leS3.Le_arquivosBucketS3(NomeBucketS3raw, arquivoUltimoProcessado, patharquivoUltimoProcessado)
 
     if retornoLe == False:
         print('arquivo não encontrado: ' + arquivoUltimoProcessado + 
-              ' no bucket ' + NomeBucketS3processed)
+              ' no bucket ' + NomeBucketS3raw)
         exit()
 
     # verifica se o arquivo ultimoProcessado.txt existe e, se não, cria o mesmo
@@ -101,9 +103,9 @@ def lambda_handler(event, context):
 
         while int(mes) <= 1: #12:
 
-            print('mes ' + str(meshgrid))
+            print('mes ' + str(mes))
 
-            while int(seq) <= 3: #13:
+            while int(seq) <= 13: #13:
 
                 print('seq ' + str(seq))
 
@@ -122,17 +124,25 @@ def lambda_handler(event, context):
                         PathArquivoJson= ('arquivosPMCprocessed/PercUF_' + 
                                             nomeArq.format(anomes, seq)[:13])
                         retorno= MUF.Monta_UF_Json(tabela, ano, mes, PathArquivoJson)
+
+                        if retorno == True:
+                            uplf.UploadFile_arquivosPMCprocessedS3(
+                                            NomeBucketS3processedUF, 
+                                            nomeArquivoJson + '.pq', 
+                                            PathArquivoJson + '.pq')
+                            ultimoArquivoProcessado = nomeArq.format(anomes, seq)                        
                     else:
                         nomeArquivoJson= 'PercCAT_COMERCIO_' + nomeArqJson.format(anomes, seq)[:13]
                         PathArquivoJson= ('arquivosPMCprocessed/PercCAT_COMERCIO_' + 
                                             nomeArq.format(anomes, seq)[:13])                    
                         retorno= MCatC.Monta_CatComercio_Json(tabela, ano, mes, PathArquivoJson)
 
-                    if retorno == True:
-                        uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3processed, 
-                                        nomeArquivoJson + '.json', 
-                                        PathArquivoJson + '.json')
-                        ultimoArquivoProcessado = nomeArq.format(anomes, seq)
+                        if retorno == True:
+                            uplf.UploadFile_arquivosPMCprocessedS3(
+                                            NomeBucketS3processedCatCom, 
+                                            nomeArquivoJson + '.pq', 
+                                            PathArquivoJson + '.pq')
+                            ultimoArquivoProcessado = nomeArq.format(anomes, seq)
          
                 seq = int(seq) + 1
                 seq = '%02d' % seq
@@ -148,4 +158,4 @@ def lambda_handler(event, context):
         
     if len(ultimoArquivoProcessado) > 0: # grava a posição do último arquivo pmc.csv Processado
         sURL.SalvaUltimaURL(patharquivoUltimoProcessado, ultimoArquivoProcessado)
-        uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3processed, arquivoUltimoProcessado, patharquivoUltimoProcessado)    
+        uplf.UploadFile_arquivosPMCprocessedS3(NomeBucketS3raw, arquivoUltimoProcessado, patharquivoUltimoProcessado)    
