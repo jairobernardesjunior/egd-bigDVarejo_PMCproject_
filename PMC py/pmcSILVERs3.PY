@@ -101,7 +101,7 @@ def lambda_handler(event, context):
 
         print(str(anomes) + ' - ' + str(anoMesCorrente))
 
-        while int(mes) <= 1: #12:
+        while int(mes) <= 12: #12:
 
             print('mes ' + str(mes))
 
@@ -112,8 +112,8 @@ def lambda_handler(event, context):
                 # verifica se o arquivo arquivoPMCprocessed .csv existe e processa o mesmo
                 retornoLe = leS3.Le_arquivosBucketS3(NomeBucketS3raw, 
                                        nomeArq.format(anomes, seq), 
-                                       tmpAuxRaw + nomeArq.format(anomes, seq))  
-
+                                       tmpAuxRaw + nomeArq.format(anomes, seq))
+                
                 arquivo= tmpAuxRaw + nomeArq.format(anomes, seq)
 
                 if retornoLe == True:
@@ -130,6 +130,10 @@ def lambda_handler(event, context):
                                             NomeBucketS3processedUF, 
                                             nomeArquivoJson + '.pq', 
                                             PathArquivoJson + '.pq')
+                            uplf.UploadFile_arquivosPMCprocessedS3(
+                                            'arqs-uf-pmc-processeds3-dtdv', 
+                                            nomeArquivoJson + '.csv', 
+                                            PathArquivoJson + '.csv')                                            
                             ultimoArquivoProcessado = nomeArq.format(anomes, seq)                        
                     else:
                         nomeArquivoJson= 'PercCAT_COMERCIO_' + nomeArqJson.format(anomes, seq)[:13]
@@ -142,6 +146,10 @@ def lambda_handler(event, context):
                                             NomeBucketS3processedCatCom, 
                                             nomeArquivoJson + '.pq', 
                                             PathArquivoJson + '.pq')
+                            uplf.UploadFile_arquivosPMCprocessedS3(
+                                            'arqs-catcom-pmc-processeds3-dtdv', 
+                                            nomeArquivoJson + '.csv', 
+                                            PathArquivoJson + '.csv')                                             
                             ultimoArquivoProcessado = nomeArq.format(anomes, seq)
          
                 seq = int(seq) + 1
