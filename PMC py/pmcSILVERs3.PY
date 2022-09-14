@@ -130,10 +130,7 @@ def lambda_handler(event, context):
                                             NomeBucketS3processedUF, 
                                             nomeArquivoJson + '.pq', 
                                             PathArquivoJson + '.pq')
-                            uplf.UploadFile_arquivosPMCprocessedS3(
-                                            'arqs-uf-pmc-processeds3-dtdv', 
-                                            nomeArquivoJson + '.csv', 
-                                            PathArquivoJson + '.csv')                                            
+                                           
                             ultimoArquivoProcessado = nomeArq.format(anomes, seq)                        
                     else:
                         nomeArquivoJson= 'PercCAT_COMERCIO_' + nomeArqJson.format(anomes, seq)[:13]
@@ -146,10 +143,7 @@ def lambda_handler(event, context):
                                             NomeBucketS3processedCatCom, 
                                             nomeArquivoJson + '.pq', 
                                             PathArquivoJson + '.pq')
-                            uplf.UploadFile_arquivosPMCprocessedS3(
-                                            'arqs-catcom-pmc-processeds3-dtdv', 
-                                            nomeArquivoJson + '.csv', 
-                                            PathArquivoJson + '.csv')                                             
+                                             
                             ultimoArquivoProcessado = nomeArq.format(anomes, seq)
          
                 seq = int(seq) + 1
