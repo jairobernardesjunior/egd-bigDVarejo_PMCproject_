@@ -1,0 +1,16 @@
+    registro                                                             classe_comercio ano_mes   m3mensal
+0          1                                             1. Combustíveis e lubrificantes  202202  153.31799
+1          2       2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo  202202  165.12304
+2          3                                          2.1. Hipermercados e supermercados  202202  168.16962
+3          4                                            3. Tecidos, vestuário e calçados  202202  102.32044
+4          5                                                4. Móveis e eletrodomésticos  202202  109.59256
+5          6                                                                 4.1. Móveis  202202  107.45915
+6          7                                                       4.2. Eletrodomésticos  202202  109.65369
+7          8  5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos  202202  191.35502
+8          9                                    6. Livros, jornais, revistas e papelaria  202202    38.5063
+9         10      7. Equipamentos e materiais para escritório, informática e comunicação  202202   74.45395
+10        11                                8. Outros artigos de uso pessoal e doméstico  202202  188.89291
+11        12                                             Comércio Varejista Ampliado (2)  202202  148.38437
+12        13                                   9. Veículos, motocicletas, partes e peças  202202  121.42402
+13        14                                                  10. Material de construção  202202  180.47096
+14        15                                                                         NaN  202202        nan

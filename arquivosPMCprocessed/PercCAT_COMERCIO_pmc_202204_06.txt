@@ -1,0 +1,16 @@
+    registro                                                             classe_comercio ano_mes m3mensal
+0          1                                 Receita de vendas do comércio varejista (5)  202204     22.3
+1          2                                             1. Combustíveis e lubrificantes  202204     46.6
+2          3       2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo  202204       20
+3          4                                          2.1. Hipermercados e supermercados  202204     19.7
+4          5                                            3. Tecidos, vestuário e calçados  202204       53
+5          6                                                4. Móveis e eletrodomésticos  202204      5.3
+6          7                                                                 4.1. Móveis  202204      7.8
+7          8                                                       4.2. Eletrodomésticos  202204      4.2
+8          9  5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos  202204     15.4
+9         10                                    6. Livros, jornais, revistas e papelaria  202204        5
+10        11      7. Equipamentos e materiais para escritório, informática e comunicação  202204      3.9
+11        12                                8. Outros artigos de uso pessoal e doméstico  202204     15.3
+12        13                        Receita de vendas do comércio varejista ampliado (6)  202204     18.7
+13        14                                   9. Veículos, motocicletas, partes e peças  202204     14.3
+14        15                                                  10. Material de construção  202204      3.3

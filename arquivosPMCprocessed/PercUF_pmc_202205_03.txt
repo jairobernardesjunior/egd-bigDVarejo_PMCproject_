@@ -1,0 +1,29 @@
+    registro                   UF ano_mes m3mensal
+0          1              Brasil   202205     -0.7
+1          2             Rondônia  202205        2
+2          3                 Acre  202205     -3.5
+3          4             Amazonas  202205     -4.8
+4          5              Roraima  202205      8.2
+5          6                 Pará  202205      2.1
+6          7                Amapá  202205    -11.1
+7          8            Tocantins  202205      7.2
+8          9             Maranhão  202205     -0.6
+9         10                Piauí  202205      3.6
+10        11                Ceará  202205      5.9
+11        12  Rio Grande do Norte  202205      1.9
+12        13              Paraíba  202205     -0.7
+13        14           Pernambuco  202205    -10.9
+14        15              Alagoas  202205      5.9
+15        16              Sergipe  202205     11.2
+16        17                Bahia  202205     -6.6
+17        18         Minas Gerais  202205      3.6
+18        19       Espírito Santo  202205     -2.3
+19        20       Rio de Janeiro  202205     -2.6
+20        21            São Paulo  202205     -2.9
+21        22               Paraná  202205     -3.7
+22        23       Santa Catarina  202205      4.8
+23        24    Rio Grande do Sul  202205      1.8
+24        25   Mato Grosso do Sul  202205      4.9
+25        26          Mato Grosso  202205        6
+26        27                Goiás  202205      2.3
+27        28     Distrito Federal  202205        0
