@@ -1,16 +1,16 @@
-,registro,classe_comercio,ano_mes,m3mensal
-0,1,1. Combustíveis e lubrificantes,202203,72.89177
-1,2,"2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo",202203,100.61499
-2,3,2.1. Hipermercados e supermercados,202203,102.7229
-3,4,"3. Tecidos, vestuário e calçados",202203,78.07314
-4,5,4. Móveis e eletrodomésticos,202203,84.9915
-5,6,4.1. Móveis,202203,88.68629
-6,7,4.2. Eletrodomésticos,202203,82.52483
-7,8,"5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos",202203,138.59291
-8,9,"6. Livros, jornais, revistas e papelaria",202203,25.40062
-9,10,"7. Equipamentos e materiais para escritório, informática e comunicação",202203,66.0198
-10,11,8. Outros artigos de uso pessoal e doméstico,202203,116.92364
-11,12,Comércio Varejista Ampliado (2),202203,99.51586
-12,13,"9. Veículos, motocicletas, partes e peças",202203,100.24261
-13,14,10. Material de construção,202203,116.74091
-14,15,,202203,nan
+,registro,classe_comercio,ano_mes,ano,mes,m3mensal
+0,1,1. Combustíveis e lubrificantes,202203,2022,03,72.89177
+1,2,"2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo",202203,2022,03,100.61499
+2,3,2.1. Hipermercados e supermercados,202203,2022,03,102.7229
+3,4,"3. Tecidos, vestuário e calçados",202203,2022,03,78.07314
+4,5,4. Móveis e eletrodomésticos,202203,2022,03,84.9915
+5,6,4.1. Móveis,202203,2022,03,88.68629
+6,7,4.2. Eletrodomésticos,202203,2022,03,82.52483
+7,8,"5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos",202203,2022,03,138.59291
+8,9,"6. Livros, jornais, revistas e papelaria",202203,2022,03,25.40062
+9,10,"7. Equipamentos e materiais para escritório, informática e comunicação",202203,2022,03,66.0198
+10,11,8. Outros artigos de uso pessoal e doméstico,202203,2022,03,116.92364
+11,12,Comércio Varejista Ampliado (2),202203,2022,03,99.51586
+12,13,"9. Veículos, motocicletas, partes e peças",202203,2022,03,100.24261
+13,14,10. Material de construção,202203,2022,03,116.74091
+14,15,,202203,2022,03,nan

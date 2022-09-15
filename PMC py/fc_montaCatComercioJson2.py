@@ -13,6 +13,8 @@ def Monta_CatComercio_Json(tabela, ano, mes, PathArquivoJson):
     registro= []
     descricao= []
     anomes= []
+    ano_x= []
+    mes_x= []
 
     m3mensal= []               
 
@@ -36,6 +38,8 @@ def Monta_CatComercio_Json(tabela, ano, mes, PathArquivoJson):
         registro.append(i)
         descricao.append(tabela.iloc[linhaXLS, 0])
         anomes.append(str(ano) + str(mes))
+        ano_x.append(str(ano))
+        mes_x.append(str(mes))        
 
         m3mensal.append(str(tabela.iloc[linhaXLS, 6]).replace('- ','0'))         
 
@@ -46,6 +50,8 @@ def Monta_CatComercio_Json(tabela, ano, mes, PathArquivoJson):
                 "registro":registro,
                 "classe_comercio":descricao,
                 "ano_mes":anomes,
+                "ano":ano_x,
+                "mes":mes_x,
 
                 "m3mensal":m3mensal,
                 })

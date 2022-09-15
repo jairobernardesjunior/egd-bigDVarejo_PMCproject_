@@ -1,29 +1,29 @@
-    registro                   UF ano_mes m3mensal
-0          1              Brasil   202205       17
-1          2             Rondônia  202205     11.5
-2          3                 Acre  202205     10.3
-3          4             Amazonas  202205      4.8
-4          5              Roraima  202205     27.2
-5          6                 Pará  202205     16.9
-6          7                Amapá  202205      4.3
-7          8            Tocantins  202205     11.7
-8          9             Maranhão  202205     16.8
-9         10                Piauí  202205     19.8
-10        11                Ceará  202205       22
-11        12  Rio Grande do Norte  202205     17.9
-12        13              Paraíba  202205     16.4
-13        14           Pernambuco  202205      9.2
-14        15              Alagoas  202205     27.3
-15        16              Sergipe  202205     19.8
-16        17                Bahia  202205     11.8
-17        18         Minas Gerais  202205     21.5
-18        19       Espírito Santo  202205     24.5
-19        20       Rio de Janeiro  202205     11.6
-20        21            São Paulo  202205     15.7
-21        22               Paraná  202205     17.5
-22        23       Santa Catarina  202205       20
-23        24    Rio Grande do Sul  202205       20
-24        25   Mato Grosso do Sul  202205     26.5
-25        26          Mato Grosso  202205     24.4
-26        27                Goiás  202205     14.2
-27        28     Distrito Federal  202205     21.5
+    registro                   UF ano_mes   ano mes m3mensal
+0          1              Brasil   202205  2022  05       17
+1          2             Rondônia  202205  2022  05     11.5
+2          3                 Acre  202205  2022  05     10.3
+3          4             Amazonas  202205  2022  05      4.8
+4          5              Roraima  202205  2022  05     27.2
+5          6                 Pará  202205  2022  05     16.9
+6          7                Amapá  202205  2022  05      4.3
+7          8            Tocantins  202205  2022  05     11.7
+8          9             Maranhão  202205  2022  05     16.8
+9         10                Piauí  202205  2022  05     19.8
+10        11                Ceará  202205  2022  05       22
+11        12  Rio Grande do Norte  202205  2022  05     17.9
+12        13              Paraíba  202205  2022  05     16.4
+13        14           Pernambuco  202205  2022  05      9.2
+14        15              Alagoas  202205  2022  05     27.3
+15        16              Sergipe  202205  2022  05     19.8
+16        17                Bahia  202205  2022  05     11.8
+17        18         Minas Gerais  202205  2022  05     21.5
+18        19       Espírito Santo  202205  2022  05     24.5
+19        20       Rio de Janeiro  202205  2022  05     11.6
+20        21            São Paulo  202205  2022  05     15.7
+21        22               Paraná  202205  2022  05     17.5
+22        23       Santa Catarina  202205  2022  05       20
+23        24    Rio Grande do Sul  202205  2022  05       20
+24        25   Mato Grosso do Sul  202205  2022  05     26.5
+25        26          Mato Grosso  202205  2022  05     24.4
+26        27                Goiás  202205  2022  05     14.2
+27        28     Distrito Federal  202205  2022  05     21.5

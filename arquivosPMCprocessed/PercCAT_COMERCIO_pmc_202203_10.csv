@@ -1,16 +1,16 @@
-,registro,classe_comercio,ano_mes,m3mensal
-0,1,1. Combustíveis e lubrificantes,202203,147.28496
-1,2,"2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo",202203,162.44886
-2,3,2.1. Hipermercados e supermercados,202203,165.13096
-3,4,"3. Tecidos, vestuário e calçados",202203,93.54638
-4,5,4. Móveis e eletrodomésticos,202203,105.34047
-5,6,4.1. Móveis,202203,103.84514
-6,7,4.2. Eletrodomésticos,202203,105.15835
-7,8,"5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos",202203,188.88002
-8,9,"6. Livros, jornais, revistas e papelaria",202203,37.61811
-9,10,"7. Equipamentos e materiais para escritório, informática e comunicação",202203,69.68725
-10,11,8. Outros artigos de uso pessoal e doméstico,202203,156.09093
-11,12,Comércio Varejista Ampliado (2),202203,144.29871
-12,13,"9. Veículos, motocicletas, partes e peças",202203,125.20692
-13,14,10. Material de construção,202203,179.24544
-14,15,,202203,nan
+,registro,classe_comercio,ano_mes,ano,mes,m3mensal
+0,1,1. Combustíveis e lubrificantes,202203,2022,03,147.28496
+1,2,"2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo",202203,2022,03,162.44886
+2,3,2.1. Hipermercados e supermercados,202203,2022,03,165.13096
+3,4,"3. Tecidos, vestuário e calçados",202203,2022,03,93.54638
+4,5,4. Móveis e eletrodomésticos,202203,2022,03,105.34047
+5,6,4.1. Móveis,202203,2022,03,103.84514
+6,7,4.2. Eletrodomésticos,202203,2022,03,105.15835
+7,8,"5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos",202203,2022,03,188.88002
+8,9,"6. Livros, jornais, revistas e papelaria",202203,2022,03,37.61811
+9,10,"7. Equipamentos e materiais para escritório, informática e comunicação",202203,2022,03,69.68725
+10,11,8. Outros artigos de uso pessoal e doméstico,202203,2022,03,156.09093
+11,12,Comércio Varejista Ampliado (2),202203,2022,03,144.29871
+12,13,"9. Veículos, motocicletas, partes e peças",202203,2022,03,125.20692
+13,14,10. Material de construção,202203,2022,03,179.24544
+14,15,,202203,2022,03,nan

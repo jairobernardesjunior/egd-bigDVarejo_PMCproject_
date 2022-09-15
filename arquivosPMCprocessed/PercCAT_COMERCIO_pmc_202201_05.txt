@@ -1,16 +1,16 @@
-    registro                                                             classe_comercio ano_mes m3mensal
-0          1                                             1. Combustíveis e lubrificantes  202201     72.8
-1          2       2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo  202201     97.4
-2          3                                          2.1. Hipermercados e supermercados  202201     99.5
-3          4                                            3. Tecidos, vestuário e calçados  202201     80.7
-4          5                                                4. Móveis e eletrodomésticos  202201     86.3
-5          6                                                                 4.1. Móveis  202201     84.3
-6          7                                                       4.2. Eletrodomésticos  202201     86.6
-7          8  5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos  202201    135.3
-8          9                                    6. Livros, jornais, revistas e papelaria  202201     26.6
-9         10      7. Equipamentos e materiais para escritório, informática e comunicação  202201     69.5
-10        11                                8. Outros artigos de uso pessoal e doméstico  202201    118.3
-11        12                                             Comércio Varejista Ampliado (2)  202201     97.3
-12        13                                   9. Veículos, motocicletas, partes e peças  202201     94.9
-13        14                                                  10. Material de construção  202201    115.2
-14        15                                                                         NaN  202201      nan
+    registro                                                             classe_comercio ano_mes   ano mes m3mensal
+0          1                                             1. Combustíveis e lubrificantes  202201  2022  01     72.8
+1          2       2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo  202201  2022  01     97.4
+2          3                                          2.1. Hipermercados e supermercados  202201  2022  01     99.5
+3          4                                            3. Tecidos, vestuário e calçados  202201  2022  01     80.7
+4          5                                                4. Móveis e eletrodomésticos  202201  2022  01     86.3
+5          6                                                                 4.1. Móveis  202201  2022  01     84.3
+6          7                                                       4.2. Eletrodomésticos  202201  2022  01     86.6
+7          8  5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos  202201  2022  01    135.3
+8          9                                    6. Livros, jornais, revistas e papelaria  202201  2022  01     26.6
+9         10      7. Equipamentos e materiais para escritório, informática e comunicação  202201  2022  01     69.5
+10        11                                8. Outros artigos de uso pessoal e doméstico  202201  2022  01    118.3
+11        12                                             Comércio Varejista Ampliado (2)  202201  2022  01     97.3
+12        13                                   9. Veículos, motocicletas, partes e peças  202201  2022  01     94.9
+13        14                                                  10. Material de construção  202201  2022  01    115.2
+14        15                                                                         NaN  202201  2022  01      nan

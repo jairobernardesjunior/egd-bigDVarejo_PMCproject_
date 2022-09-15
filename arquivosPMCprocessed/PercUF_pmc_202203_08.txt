@@ -1,29 +1,29 @@
-    registro                   UF ano_mes m3mensal
-0          1              Brasil   202203     19.3
-1          2             Rondônia  202203     17.4
-2          3                 Acre  202203     11.6
-3          4             Amazonas  202203      1.1
-4          5              Roraima  202203     25.9
-5          6                 Pará  202203     26.2
-6          7                Amapá  202203     30.6
-7          8            Tocantins  202203     32.8
-8          9             Maranhão  202203     15.4
-9         10                Piauí  202203     24.4
-10        11                Ceará  202203     25.4
-11        12  Rio Grande do Norte  202203     16.2
-12        13              Paraíba  202203     17.3
-13        14           Pernambuco  202203     11.9
-14        15              Alagoas  202203     21.3
-15        16              Sergipe  202203     20.5
-16        17                Bahia  202203       22
-17        18         Minas Gerais  202203     21.2
-18        19       Espírito Santo  202203     24.9
-19        20       Rio de Janeiro  202203     11.3
-20        21            São Paulo  202203     18.8
-21        22               Paraná  202203     15.8
-22        23       Santa Catarina  202203     26.6
-23        24    Rio Grande do Sul  202203     18.6
-24        25   Mato Grosso do Sul  202203     25.2
-25        26          Mato Grosso  202203     19.2
-26        27                Goiás  202203     35.5
-27        28     Distrito Federal  202203     20.8
+    registro                   UF ano_mes   ano mes m3mensal
+0          1              Brasil   202203  2022  03     19.3
+1          2             Rondônia  202203  2022  03     17.4
+2          3                 Acre  202203  2022  03     11.6
+3          4             Amazonas  202203  2022  03      1.1
+4          5              Roraima  202203  2022  03     25.9
+5          6                 Pará  202203  2022  03     26.2
+6          7                Amapá  202203  2022  03     30.6
+7          8            Tocantins  202203  2022  03     32.8
+8          9             Maranhão  202203  2022  03     15.4
+9         10                Piauí  202203  2022  03     24.4
+10        11                Ceará  202203  2022  03     25.4
+11        12  Rio Grande do Norte  202203  2022  03     16.2
+12        13              Paraíba  202203  2022  03     17.3
+13        14           Pernambuco  202203  2022  03     11.9
+14        15              Alagoas  202203  2022  03     21.3
+15        16              Sergipe  202203  2022  03     20.5
+16        17                Bahia  202203  2022  03       22
+17        18         Minas Gerais  202203  2022  03     21.2
+18        19       Espírito Santo  202203  2022  03     24.9
+19        20       Rio de Janeiro  202203  2022  03     11.3
+20        21            São Paulo  202203  2022  03     18.8
+21        22               Paraná  202203  2022  03     15.8
+22        23       Santa Catarina  202203  2022  03     26.6
+23        24    Rio Grande do Sul  202203  2022  03     18.6
+24        25   Mato Grosso do Sul  202203  2022  03     25.2
+25        26          Mato Grosso  202203  2022  03     19.2
+26        27                Goiás  202203  2022  03     35.5
+27        28     Distrito Federal  202203  2022  03     20.8

@@ -1,16 +1,16 @@
-    registro                                                             classe_comercio ano_mes m3mensal
-0          1                                 Receita de vendas do comércio varejista (5)  202201     10.6
-1          2                                             1. Combustíveis e lubrificantes  202201     34.5
-2          3       2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo  202201      7.4
-3          4                                          2.1. Hipermercados e supermercados  202201      7.3
-4          5                                            3. Tecidos, vestuário e calçados  202201       14
-5          6                                                4. Móveis e eletrodomésticos  202201     -0.1
-6          7                                                                 4.1. Móveis  202201      4.1
-7          8                                                       4.2. Eletrodomésticos  202201     -1.7
-8          9  5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos  202201     16.7
-9         10                                    6. Livros, jornais, revistas e papelaria  202201     28.9
-10        11      7. Equipamentos e materiais para escritório, informática e comunicação  202201     -5.1
-11        12                                8. Outros artigos de uso pessoal e doméstico  202201      5.3
-12        13                        Receita de vendas do comércio varejista ampliado (6)  202201       12
-13        14                                   9. Veículos, motocicletas, partes e peças  202201     19.8
-14        15                                                  10. Material de construção  202201      7.9
+    registro                                                             classe_comercio ano_mes   ano mes m3mensal
+0          1                                 Receita de vendas do comércio varejista (5)  202201  2022  01     10.6
+1          2                                             1. Combustíveis e lubrificantes  202201  2022  01     34.5
+2          3       2. Hipermercados, supermercados, produtos alimentícios bebidas e fumo  202201  2022  01      7.4
+3          4                                          2.1. Hipermercados e supermercados  202201  2022  01      7.3
+4          5                                            3. Tecidos, vestuário e calçados  202201  2022  01       14
+5          6                                                4. Móveis e eletrodomésticos  202201  2022  01     -0.1
+6          7                                                                 4.1. Móveis  202201  2022  01      4.1
+7          8                                                       4.2. Eletrodomésticos  202201  2022  01     -1.7
+8          9  5. Artigos farmacêuticos, médicos, ortopédicos, de perfumaria e cosméticos  202201  2022  01     16.7
+9         10                                    6. Livros, jornais, revistas e papelaria  202201  2022  01     28.9
+10        11      7. Equipamentos e materiais para escritório, informática e comunicação  202201  2022  01     -5.1
+11        12                                8. Outros artigos de uso pessoal e doméstico  202201  2022  01      5.3
+12        13                        Receita de vendas do comércio varejista ampliado (6)  202201  2022  01       12
+13        14                                   9. Veículos, motocicletas, partes e peças  202201  2022  01     19.8
+14        15                                                  10. Material de construção  202201  2022  01      7.9
